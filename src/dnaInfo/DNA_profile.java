@@ -41,7 +41,7 @@ public class DNA_profile {
     		}
         	//iterate through 1/3 the length of the string and print 3 bases at a time
         	for(int i = 0; i< dnaString.length()/3; i++){
-        		System.out.println("Codon "+i+ ": "+ dnaString.substring(3*i, 3*i+3) );
+        		System.out.println("Codon "+ i + ": "+ dnaString.substring(3*i, 3*i+3) );
         	}
         }
         
