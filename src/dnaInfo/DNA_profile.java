@@ -47,7 +47,7 @@ public class DNA_profile {
         
         //reverse the strand
         public void reverseStrand(){
-        	System.out.println( new StringBuilder(dnaString).reverse().toString() );
+        	System.out.println(new StringBuilder(dnaString).reverse().toString());
         }
          
 }
