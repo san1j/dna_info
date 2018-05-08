@@ -49,5 +49,14 @@ public class DNA_profile {
         public void reverseStrand(){
         	System.out.println(new StringBuilder(dnaString).reverse().toString());
         }
+        
+        //find out if DNA strand is valid and made up of valid bases
+        public boolean isStringValid(){
+        	 for(int i= 0; i<dnaString.length(); i++){
+             	if(dnaString.charAt(i) != 'A' || 'G' || 'T' || 'C') return false;
+             }
+        }
+       
+        
          
 }
