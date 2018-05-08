@@ -5,6 +5,7 @@ public class DNA_profile {
 	
         public DNA_profile(String dnaString){
         	this.dnaString = dnaString.toUpperCase();
+        	isStringValid();
         }
         
         //a simple function to calculate the GC content of the DNA string
@@ -45,11 +46,12 @@ public class DNA_profile {
         	System.out.println(new StringBuilder(dnaString).reverse().toString());
         }
         
-        //find out if DNA strand is valid and made up of valid bases
+        //find out if DNA strand is valid 
         public boolean isStringValid(){
+        	//check if string is made up of valid bases
         	 for(int i= 0; i<dnaString.length(); i++){
              	if(dnaString.charAt(i) != 'A' || 'G' || 'T' || 'C') return false;
-             	//return if string isn't a multiple of 3
+             	//return false if string isn't a multiple of 3
             	if(dnaString.length() % 3 !=0){
         			System.out.println("Please provide a valid string");
         			return false;
