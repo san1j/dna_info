@@ -61,7 +61,6 @@ public class DNA_profile {
         			return false;
         		}
              }
-        	
         	 return true;
         }
        
