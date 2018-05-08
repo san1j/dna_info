@@ -34,11 +34,6 @@ public class DNA_profile {
         
         //print all the codons (triplets)
         public void printCodons(){
-        	//return if string isn't a multiple of 3
-        	if(dnaString.length() % 3 !=0){
-    			System.out.println("Please provide a valid string");
-    			return;
-    		}
         	//iterate through 1/3 the length of the string and print 3 bases at a time
         	for(int i = 0; i< dnaString.length()/3; i++){
         		System.out.println("Codon "+ i + ": "+ dnaString.substring(3*i, 3*i+3) );
@@ -54,6 +49,12 @@ public class DNA_profile {
         public boolean isStringValid(){
         	 for(int i= 0; i<dnaString.length(); i++){
              	if(dnaString.charAt(i) != 'A' || 'G' || 'T' || 'C') return false;
+             	//return if string isn't a multiple of 3
+            	if(dnaString.length() % 3 !=0){
+        			System.out.println("Please provide a valid string");
+        			return false;
+        		}
+             	else return true;
              }
         }
        
