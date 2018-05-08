@@ -1,4 +1,5 @@
-package dnaInfo;
+ 
+package com.sanjana.demo;
 
 public class DNA_profile {
 	private String dnaString;
@@ -50,16 +51,21 @@ public class DNA_profile {
         public boolean isStringValid(){
         	//check if string is made up of valid bases
         	 for(int i= 0; i<dnaString.length(); i++){
-             	if(dnaString.charAt(i) != 'A' || 'G' || 'T' || 'C') return false;
+             	if(dnaString.matches(".*[^ATCG].*")){
+        			System.out.println("The string contains incorrect bases.");
+        			return false;
+             	}
              	//return false if string isn't a multiple of 3
             	if(dnaString.length() % 3 !=0){
         			System.out.println("Please provide a valid string");
         			return false;
         		}
-             	else return true;
              }
+        	
+        	 return true;
         }
        
-        
          
 }
+
+ 
