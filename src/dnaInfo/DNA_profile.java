@@ -1,6 +1,9 @@
  
 package com.sanjana.demo;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class DNA_profile {
 	private String dnaString;
 	
@@ -64,6 +67,19 @@ public class DNA_profile {
         	 return true;
         }
        
+        //return the frequency of a particular pattern in the DNA strand
+        public int count(String pattern){
+    	
+    		int counter = 0;
+    		Pattern p = Pattern.compile(pattern);
+    		Matcher m = p.matcher(dnaString);
+    		
+    		while(m.find()){
+    			counter++;
+    		}
+    		
+    		return counter;
+    	}
          
 }
 
