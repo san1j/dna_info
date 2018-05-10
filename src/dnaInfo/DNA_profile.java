@@ -80,6 +80,12 @@ public class DNA_profile {
     		
     		return counter;
     	}
+        
+        //return the start codon index
+        public int startIndex(){
+        	if(dnaString.contains("ATG"))
+        }
+        
          
 }
 
