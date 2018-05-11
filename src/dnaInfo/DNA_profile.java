@@ -87,6 +87,7 @@ public class DNA_profile {
         	else return -1;
         }
         
+        //return the stop codon index, if present
          
 }
 
