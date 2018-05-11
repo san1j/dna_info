@@ -88,7 +88,12 @@ public class DNA_profile {
         }
         
         //return the stop codon index, if present
-         
+        public int stopIndex(){
+        	if(dnaString.contains("TAG")) return dnaString.indexOf("TAG");
+        	if(dnaString.contains("TAG")) return dnaString.indexOf("TGA");
+        	if(dnaString.contains("TAG")) return dnaString.indexOf("TAA");
+        	else return -1;
+        }
 }
 
  
