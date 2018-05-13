@@ -91,7 +91,7 @@ public class DNA_profile {
         //make sure codon index is multiple of 3 to be valid
         public int stopIndex(){
         	if(dnaString.contains("TAG") && dnaString.indexOf("TAG") % 3 == 0) return dnaString.indexOf("TAG");
-        	if(dnaString.contains("TAG")) return dnaString.indexOf("TGA");
+        	if(dnaString.contains("TAG") && dnaString.indexOf("TAG") % 3 == 0) return dnaString.indexOf("TGA");
         	if(dnaString.contains("TAG")) return dnaString.indexOf("TAA");
         	else return -1;
         }
