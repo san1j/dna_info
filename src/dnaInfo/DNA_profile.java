@@ -90,10 +90,11 @@ public class DNA_profile {
         //return the stop codon index, if present
         //make sure codon index is multiple of 3 to be valid
         public int stopIndex(){
-        	if(dnaString.contains("TAG") && dnaString.indexOf("TAG") % 3 == 0) int index1 = dnaString.indexOf("TAG");
-        	else if(dnaString.contains("TAG") && dnaString.indexOf("TAG") % 3 == 0) int index2 = dnaString.indexOf("TGA");
-        	else if(dnaString.contains("TAG") && dnaString.indexOf("TAG") % 3 == 0) int index3 = dnaString.indexOf("TAA");
-        	else return -1;
+        	int index1 = 0; int index2 = 0; int index3 = 0;
+        	if(dnaString.contains("TAG") && dnaString.indexOf("TAG") % 3 == 0)  index1 = dnaString.indexOf("TAG"); 
+        	if(dnaString.contains("TAG") && dnaString.indexOf("TGA") % 3 == 0)  index2 = dnaString.indexOf("TGA"); 
+        	if(dnaString.contains("TAG") && dnaString.indexOf("TAA") % 3 == 0)  index3 = dnaString.indexOf("TAA"); 
+        	return Math.min( Math.min(index1, index2), index3);
         }
 }
 
