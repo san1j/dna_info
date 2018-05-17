@@ -53,7 +53,7 @@ public class DNA_profile {
         //find out if DNA strand is valid 
         public boolean isStringValid(){
         	//check if string is made up of valid bases
-        	 for(int i= 0; i<dnaString.length(); i++){
+        	 for(int i= 0; i <dnaString.length(); i++){
              	if(dnaString.matches(".*[^ATCG].*")){
         			System.out.println("The string contains incorrect bases.");
         			return false;
@@ -71,7 +71,7 @@ public class DNA_profile {
         public int count(String pattern){
     	
     		int counter = 0;
-    		Pattern p = Pattern.compile(pattern);
+    		Pattern p = Pattern.compile(pattern.toUpperCase());
     		Matcher m = p.matcher(dnaString);
     		
     		while(m.find()){
