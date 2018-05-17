@@ -83,8 +83,7 @@ public class DNA_profile {
         
         //return the start codon index
         public int startIndex(){
-        	if(dnaString.contains("ATG")) return dnaString.indexOf("ATG");
-        	else return -1;
+        	return dnaString.indexOf("ATG");
         }
         
         //return the stop codon index, if present
